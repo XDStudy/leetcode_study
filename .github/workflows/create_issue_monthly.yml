@@ -26,7 +26,7 @@ jobs:
       - name: Create issue
         uses: imjohnbo/issue-bot@v3.0
         with:
-          assignees: "JaeguKim, uhyunpark"
+          assignees: "JaeguKim"
           labels: "Easy, Medium, Hard"
           title: "test${{ env.YYYY_MM }}월"
           body: $test{{ env.YYYY_MM }}월 알고리즘 스터디
