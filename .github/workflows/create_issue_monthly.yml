@@ -1,0 +1,36 @@
+name: Create issue monthly
+
+on:
+  push:
+    branches:
+      - master
+#on:
+#  schedule:
+    # Run every 00:00 on 1st day of month in KST
+    # - cron: '0 15 30 4,6,9,11 *'
+    # - cron: '0 15 31 1,3,5,7,8,10,12 *'
+    # - cron: '0 15 28 2 *'
+#    - cron: '0 0 1 * *'
+#  workflow_dispatch:
+
+jobs:
+  create_issue:
+    name: Create issue montly
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Set env
+        run: echo "YYYY_MM=$(date +'%Y-%m')" >> $GITHUB_ENV
+
+      - name: Create issue
+        uses: imjohnbo/issue-bot@v3.0
+        with:
+          assignees: "JaeguKim, uhyunpark"
+          labels: "Easy, Medium, Hard"
+          title: "test${{ env.YYYY_MM }}월"
+          body: $test{{ env.YYYY_MM }}월 알고리즘 스터디
+          pinned: false
+          close-previous: false
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.CREATE_ISSUE_TOKEN }}
