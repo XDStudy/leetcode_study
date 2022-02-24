@@ -32,5 +32,5 @@ jobs:
           body: $test{{ env.YYYY_MM }}월 알고리즘 스터디
           pinned: false
           close-previous: false
-#        env:
-#          GITHUB_TOKEN: ${{ secrets.CREATE_ISSUE_TOKEN }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.CREATE_ISSUE_TOKEN }}
