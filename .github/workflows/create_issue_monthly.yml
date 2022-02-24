@@ -3,7 +3,7 @@ name: Create issue monthly
 on:
   push:
     branches:
-      - master
+      - main
 #on:
 #  schedule:
     # Run every 00:00 on 1st day of month in KST
