@@ -1,10 +1,6 @@
 name: Create issue monthly
 
 on:
-  push:
-    branches:
-      - main
-on:
   schedule:
     # Run every 00:00 on 1st day of month in KST
     # - cron: '0 15 30 4,6,9,11 *'
