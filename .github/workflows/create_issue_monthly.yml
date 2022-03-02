@@ -24,8 +24,8 @@ jobs:
         with:
           assignees: "JaeguKim, uhyunpark"
           labels: "Easy, Medium, Hard"
-          title: "test${{ env.YYYY_MM }}월"
-          body: $test{{ env.YYYY_MM }}월 알고리즘 스터디
+          title: "${{ env.YYYY_MM }}월"
+          body: ${{ env.YYYY_MM }}월 알고리즘 스터디
           pinned: false
           close-previous: false
         env:
