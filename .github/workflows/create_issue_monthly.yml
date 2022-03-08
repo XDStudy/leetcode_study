@@ -22,7 +22,7 @@ jobs:
       - name: Create issue
         uses: imjohnbo/issue-bot@v3.0
         with:
-          assignees: "JaeguKim, uhyunpark, kalihman"
+          assignees: "JaeguKim, uhyunpark, kalihman, okayhooni"
           labels: "Easy, Medium, Hard"
           title: "${{ env.YYYY_MM }}월"
           body: ${{ env.YYYY_MM }}월 알고리즘 스터디
